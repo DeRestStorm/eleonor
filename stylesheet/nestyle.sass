@@ -1,0 +1,1099 @@
+$nav-bg: #661d8f
+
+$ease: all .1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain)
+*
+  margin: 0
+  padding: 0
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+/*
+ *========================================
+ *Пользовательские стили
+ *========================================
+
+body
+  background: #fff
+  color: #000
+  font: 400 16px/55px "Montserrat", "Raleway", Arial, sans-serif
+
+/*
+ *========================================
+ *Сетка
+ *========================================
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+/*.container {
+/*  width: 1170px;
+/*}
+
+a
+  text-decoration: none
+
+.btn.focus, .btn:focus
+  outline: 0
+  box-shadow: 0 0 0 0.2rem rgba(157, 0, 255, 0.25)
+
+/*
+ *========================================
+ *Clearfix
+ *========================================
+
+.group
+  &:before
+    content: ""
+    display: table
+
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+  clear: both
+  *zoom: 1
+
+// Mixin itself
+@mixin clearfix()
+  &::after
+    display: block
+    content: ""
+    clear: both
+
+
+/*
+ *========================================
+ *Типографика
+ *========================================
+
+.hero
+  color: inherit
+  //margin-top: 110px
+  text-align: left
+  line-height: 40px
+  letter-spacing: -1px
+
+  h1
+    font: 700 60px/40px "Montserrat", sans-serif
+    @media only screen and (max-width: 1200px) and (orientation: portrait)
+      font: 700 45px/50px "Montserrat", sans-serif
+
+  p
+    //margin: 35px 0
+    line-height: 30px
+
+  h2
+    font: 700 30px/60px "Montserrat", sans-serif
+    text-decoration: underline
+    text-decoration-color: #531974
+    padding: 20px 0
+    @media only screen and (max-width: 1200px) and (orientation: portrait)
+      font: 700 40px/40px "Montserrat", sans-serif
+
+/*
+ *========================================
+ *Основной заголовок
+ *========================================
+
+.menu .navbar-logo
+  z-index: 1000
+  flex: auto
+  height: 60px
+  padding-left: 0
+  display: inline-block
+
+  .nav-logo
+    width: 200px
+    position: relative
+
+    img
+      position: absolute
+      left: -9px
+      top: 0
+
+
+/*
+ *========================================
+ *Навигация
+ *========================================
+.menu
+  background-color: #531974
+
+.navbar-el
+  color: white
+  padding: 0 16px
+
+  .navbar-nav .active > .nav-link, .navbar-nav .nav-link.active, .navbar-nav .nav-link.show, .navbar-nav .show > .nav-link
+    color: white
+
+  .navbar-nav .nav-link
+    color: white
+
+  .navbar-nav .nav-link.disabled
+    color: rgba(255, 255, 255, .5)
+
+  a
+    padding: 0 8px
+
+  background-color: #531974 !important
+
+  .navbar-brand
+    flex: auto
+
+  .navbar-toggler
+    background-color: white
+
+    .navbar-toggler-icon
+      background-image: url(img/toggler.svg)
+
+  &_phone
+    background-color: #2835b9
+    min-height: 60px
+    @media only screen and (max-width: 778px) and (orientation: portrait)
+      display: none
+
+  &_mail
+    min-height: 60px
+    background-color: #1b2589
+    @media only screen and (max-width: 778px) and (orientation: portrait)
+      display: none
+
+.navbar-transparent .navbar-toggler
+  background-color: white
+
+  .navbar-toggler-icon
+    background-image: url(img/toggler.svg)
+
+.nav
+  text-align: left
+
+
+  li
+    display: inline-block
+    margin: 13px 17px
+    letter-spacing: -1px
+    color: #fff
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+
+
+/*
+ *========================================
+ *Основной баннер
+ *========================================
+
+.main-banner
+  background: url(../img/banner.png) no-repeat
+  color: black
+  background-size: contain
+  background-position-x: calc(100% - 50px)
+  background-position-y: bottom
+
+  @media only screen and (max-width: 700px) and (orientation: portrait)
+    min-height: 100vh
+
+  .hero
+    margin-top: 90px
+    padding-bottom: 140px
+    @media only screen and (max-width: 700px) and (orientation: portrait)
+      padding-top: 60px
+
+    p
+      margin: 35px 0
+
+    h1
+      font: 700 60px/70px "Montserrat", sans-serif
+      text-decoration: underline
+      text-decoration-color: #531974
+      animation: fadeInUp 1s
+
+    @media only screen and (max-width: 1200px) and (orientation: portrait)
+      padding-bottom: 30px
+
+    @media only screen and (max-width: 700px) and (orientation: portrait)
+      margin-top: 0
+
+
+/*
+ *========================================
+ *Ссылки
+ *========================================
+
+.navbar ul a
+  color: #d9d0d1
+
+.order
+  color: white
+  background-color: #1b2589
+  padding: 7px 70px
+  font: 400 18px/40px "Montserrat", sans-serif
+  border-radius: 5px
+  letter-spacing: 0
+
+  &:hover
+    color: white
+    text-shadow: #ff00fd 0 0 10px
+
+.more
+  color: #1c1a1a
+  background-color: white
+  padding: 17px 35px
+  font: 400 18px/40px "Montserrat", sans-serif
+  border-radius: 5px
+  letter-spacing: 0
+  //border-color: black
+  border: 1px solid #000000
+
+section
+  max-width: 1366px
+
+  margin-right: auto
+  margin-left: auto
+/*
+ *========================================
+ *О нас
+ *========================================
+
+.about
+  //background: url(img/bgabout.png) no-repeat
+  background-color: white
+  padding: 100px 0
+  //@media only screen and (max-width: 1200px) and (orientation: portrait)
+  //  background-size: cover
+  background-size: cover
+  text-align: left
+
+  .hero
+    //max-width: 590px
+    margin-top: 0
+
+
+/*
+ *========================================
+ * Преимущества
+ *========================================
+
+.advantages
+  padding: 30px 0
+  background-image: url("../img/bgadvantages.jpg")
+  background-size: cover
+  color: #fff
+
+  .warp-1
+    max-width: 870px
+    margin-right: auto
+    margin-left: auto
+    padding: 30px 0
+
+  &_card
+    background-color: initial
+    padding: 10px 25px
+    margin: 10px
+    border-radius: 10px
+
+    .deadline, .quality, .competency, .cost
+      padding-left: 90px
+      background-repeat: no-repeat
+      background-position-y: center
+
+    .deadline
+      background-image: url(../img/deadline.png)
+
+    .quality
+      background-image: url(../img/quality.png)
+
+    .competency
+      background-image: url(../img/competency.png)
+
+    .cost
+      background-image: url(../img/cost.png)
+
+    &:hover
+      background-color: white
+      color: black
+
+      .deadline
+        background-image: url(../img/deadline_f.png)
+
+      .quality
+        background-image: url(../img/quality_f.png)
+
+      .competency
+        background-image: url(../img/competency_f.png)
+
+      .cost
+        background-image: url(../img/cost_f.png)
+
+  h3
+    font: 400 24px/40px "Montserrat", sans-serif
+
+  .hero
+    h2
+      color: white
+      text-decoration-color: white
+
+/*
+ *========================================
+ * Портфолио
+ *========================================
+.portfolio
+  margin-bottom: 100px
+  margin-top: 60px
+  .mac
+    position: relative
+    width: 450px
+    height: 279px
+    padding-top: 62%
+    background-image: url(../img/mac.png)
+    background-repeat: no-repeat
+    background-position: center center
+    .screen
+      top: 3%
+
+      left: 7%
+      right: 7%
+      min-width: 136px
+      position: absolute
+      bottom: 28%
+      background-image: url(../img/screen.png)
+      background-repeat: no-repeat
+      background-size: cover
+
+  h3
+    font: 600 24px/36px "Montserrat", sans-serif
+  .nav
+    padding: 20px 15px
+    font: 100 14px/24px "Montserrat", sans-serif
+    .active
+      font-weight: bold
+      color: black
+    a
+      color: #808080
+  a.order
+    padding: 7px 20px
+    margin-left: 15px
+    color: white
+    &:hover
+      color: white
+
+
+  tbody
+    display: flex
+    td
+      display: flex
+      align-items: center
+      justify-content: center
+      min-width: 64px
+      height: 64px
+      i
+        color: white
+        font-size: 30px
+        padding-top: 3px
+      .number
+        font: 600 30px/60px "Montserrat", sans-serif
+        color: #b6b6b6
+      .active
+        color: black
+
+    .bg-violet
+      background-color: #9024ce
+    .owl-next, .owl-prev
+      -webkit-transform: rotate(90deg)
+      -moz-transform: rotate(90deg)
+      -o-transform: rotate(90deg)
+      -ms-transform: rotate(90deg)
+      transform: rotate(90deg)
+      border: none
+      width: 35px
+      height: 35px
+      background-color: #9024ce
+
+    .owl-prev i
+      padding-right: 2px
+
+    .owl-next i
+      padding-left: 2px
+/*
+ *========================================
+ * Услуги
+ *========================================
+
+.services
+  padding: 30px 0
+  background-image: url("../img/bgservices.png")
+  background-size: cover
+  color: #fff
+
+  .warp-1
+    text-align: center
+    max-width: 870px
+    margin-right: auto
+    margin-left: auto
+    padding: 30px 0
+
+  &_card
+    position: relative
+    background-color: initial
+    //margin: 10px
+    border-radius: 10px
+    padding: 10px
+    //&:hover
+    min-height: 220px
+    font: 100 18px/24px "Montserrat", sans-serif
+
+    &_cost
+      position: absolute
+      bottom: 5px
+      font: 600 18px/24px "Montserrat", sans-serif
+      left: 50%
+      min-width: 136px
+      transform: translate(-50%, 0)
+
+    .landing, .corp, .competency, .cost, .ads, .seo, .shop, .portal, .con, .admin, .smm
+      padding-top: 110px
+      background-repeat: no-repeat
+      background-position-x: center
+
+    .landing
+      background-image: url(../img/services/landing.png)
+    .corp
+      background-image: url(../img/services/corp.png)
+    .ads
+      background-image: url(../img/services/ads.png)
+    .seo
+      background-image: url(../img/services/seo.png)
+    .shop
+      background-image: url(../img/services/shop.png)
+    .admin
+      background-image: url(../img/services/admin.png)
+    .smm
+      background-image: url(../img/services/smm.png)
+    .portal
+      background-image: url(../img/services/portal.png)
+    &:hover
+      background-color: white
+      color: black
+      .landing
+        background-image: url(../img/services/landing_f.png)
+      .corp
+        background-image: url(../img/services/corp_f.png)
+      .ads
+        background-image: url(../img/services/ads_f.png)
+      .seo
+        background-image: url(../img/services/seo_f.png)
+      .shop
+        background-image: url(../img/services/shop_f.png)
+      .admin
+        background-image: url(../img/services/admin_f.png)
+      .smm
+        background-image: url(../img/services/smm_f.png)
+      .portal
+        background-image: url(../img/services/portal_f.png)
+
+  h3
+    font: 400 24px/40px "Montserrat", sans-serif
+
+  .hero
+
+    h2
+      color: white
+      text-decoration-color: white
+
+  .content
+    display: block
+    //width: 100%
+    padding-top: 10px
+    padding-left: 10px
+    box-sizing: border-box
+
+  .item
+    display: inline-block
+    float: left
+    //width: calc(50% - 10px)
+    //min-height: 120px
+    //height: 40vh
+    //margin-right: 10px
+    //margin-bottom: 10px
+    background: green
+    transition: transform .15s
+
+    &:hover
+      transform: scale(1.5)
+      background: red
+      z-index: 1
+      transition: transform .5s
+
+
+/*
+  *========================================
+  * Фотогалерея
+  *========================================
+
+.gallery
+  background-color: white
+  padding-top: 30px
+  padding-bottom: 80px
+
+  .warp-1
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+    margin-top: 0
+    color: black
+
+    .warp-2
+      @include clearfix
+      padding: 30px 0
+
+      img
+        height: auto
+
+/*
+  *========================================
+  * Отзывы
+  *========================================
+
+.opinions
+  //background: url(img/bgfb.png) no-repeat
+  //background-size: cover
+  background-color: white
+  padding-top: 60px
+  background-size: cover
+  text-align: left
+
+  .hero
+    //max-width: 590px
+    text-align: left
+    margin-top: 0
+
+    h2
+      color: black
+
+  .warp-1
+    margin-left: auto
+    margin-right: auto
+    margin-top: 0
+    color: black
+
+    .owl-carousel
+      padding: 20px 0
+
+      .owl-item
+        img
+          width: 60px
+
+    .item
+      //padding: 10px
+      text-align: left
+      font: 400 18px/28px
+      color: #282828
+      display: flex
+      justify-content: center
+      align-items: center
+
+      &:hover
+      //padding: 0
+      .user
+        font: 500 16px/26px "Roboto", sans-serif
+        color: black
+        background-position: left center
+        background-repeat: no-repeat
+        padding: 20px 0 20px 70px
+
+        .name
+          font: 500 16px/26px "Roboto", sans-serif
+          color: black
+          background-position: left center
+          background-repeat: no-repeat
+          padding: 20px 0
+
+        .details
+          font: 100 14px/22px "Roboto", sans-serif
+          color: #757579
+          background-position: left center
+          background-repeat: no-repeat
+          padding: 20px 0
+
+        .opinion
+          font: 100 16px/25px "Roboto", sans-serif
+          margin: 5px 0
+          padding: 20px 30px
+          text-align: left
+          line-height: 30px
+
+      .speech
+        margin: 5px 0
+        padding: 20px 60px
+        text-align: left
+        line-height: 30px
+        background-color: #f6f7ff
+        border: 1px solid #dadada
+        background-image: url(../img/colon.png)
+        background-repeat: no-repeat
+        background-position: 30px 50%
+
+  .owl-theme .owl-nav
+    color: white
+    position: absolute
+    top: -70px
+    right: 0
+
+    .owl-next, .owl-prev
+      width: 35px
+      height: 35px
+      background-color: #9024ce
+
+    .owl-prev i
+      padding-right: 2px
+
+    .owl-next i
+      padding-left: 2px
+
+
+/*
+  *========================================
+  * Цены
+  *========================================
+
+
+.prices
+  background-color: white
+  padding-top: 30px
+  padding-bottom: 80px
+
+  .warp-1
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+    margin-top: 0
+    color: black
+
+    .warp-2
+      padding: 30px 0
+
+      .card
+        -webkit-box-shadow: 0px 7px 14px 2px rgba(186, 186, 186, 1)
+        -moz-box-shadow: 0px 7px 14px 2px rgba(186, 186, 186, 1)
+        box-shadow: 0px 7px 14px 2px rgba(186, 186, 186, 1)
+        border-radius: 0
+
+      .card-title
+        padding-bottom: 10px
+
+        border-bottom: 1px solid #d7d7d7
+
+        font: 600 30px/28px "Montserrat", sans-serif
+        color: #edc415
+        text-align: left
+
+      .card-text
+        display: flex
+        margin: 20px 0
+
+
+        .price
+          font: 100 18px/28px "Montserrat", sans-serif
+
+          justify-content: center
+
+        .bold
+          font: 600 24px/28px "Montserrat", sans-serif
+          color: black
+
+.party
+  margin-top: 80px
+  .member
+    margin-top: 30px
+    margin-bottom: 40px
+    text-align: left
+    padding-top: 130px
+    //padding-left: 30px
+    background-image: url(../img/ellipse.png)
+    background-size: 120px
+    background-repeat: no-repeat
+    background-position-x:  20%
+    .name
+      font: 600 24px/30px "Montserrat", sans-serif
+    padding-left: 30%
+    .position
+      font: 100 16px/24px "Montserrat", sans-serif
+      color: #757579
+
+/*
+  *========================================
+  * Обратная связь
+  *========================================
+.feedback
+  background-color: white
+  //padding: 100px 0
+  background-size: 1366px
+  @media only screen and (max-width: 1200px) and (orientation: portrait)
+    background-size: cover
+
+  .hero
+    text-align: left
+    //max-width: 590px
+    margin-left: auto
+    margin-right: auto
+    margin-top: 0
+
+    h2
+      font: 600 48px/50px "Montserrat", sans-serif
+      color: #531974
+      text-decoration: none
+
+    p
+      font: 100 18px/24px "Montserrat", sans-serif
+
+  .warp_flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+  .form
+    padding-top: 40px
+
+    .form-control
+      height: calc(1.5em + .75rem + 22px)
+      padding: .375rem .75rem
+
+  .addition
+    padding: 10px 0
+    font: 100 12px/18px "Montserrat", sans-serif
+    color: #808080
+    text-decoration: #808080 underline
+
+
+/*
+  *========================================
+  * Акции
+  *========================================
+
+.stocks
+  margin-top: 60px
+  .stock
+    margin: 10px 0
+    color: white
+    padding: 50px 50px
+    display: flex
+    align-items: center
+    width: 100%
+    background: rgb(178,91,226)
+    background: linear-gradient(133deg, rgba(178,91,226,1) 0%, rgba(143,70,237,1) 50%, rgba(101,44,248,1) 100%)
+    font: 600 30px/50px "Montserrat", sans-serif
+    border-radius: 7px 7px 7px 7px
+    -moz-border-radius: 7px 7px 7px 7px
+    -webkit-border-radius: 7px 7px 7px 7px
+    -webkit-box-shadow: 0px 0px 30px -9px rgba(0,0,0,0.75)
+    -moz-box-shadow: 0px 0px 30px -9px rgba(0,0,0,0.75)
+     box-shadow: 0px 0px 30px -9px rgba(0,0,0,0.75)
+    p
+      line-height: 1.5em
+      padding-left: 20px
+    img
+    //background-image: url(../img/discount.png)
+
+  .addition
+    margin-top: 120px
+    padding: 10px 0
+    font: 100 12px/18px "Montserrat", sans-serif
+    color: #808080
+
+/*
+  *========================================
+  * Бриф
+  *========================================
+.brif
+  position: relative
+  color: white
+  background: rgb(101,53,128)
+  background: linear-gradient(180deg, rgba(101,53,128,1) 0%, rgba(83,42,131,1) 50%, rgba(58,26,136,1) 100%)
+  h2
+    text-decoration: none
+
+    font: 700 36px/50px "Montserrat", sans-serif
+  p
+    color: #dcd4e6
+  .man
+    position: absolute
+    bottom: 0
+    left: 55%
+    @media only screen and (max-width: 800px) and (orientation: portrait)
+      display: none
+  .order
+    padding: 15px 50px
+    border: none
+  .warp-1
+    padding-bottom: 25px
+
+/*
+  *========================================
+  * Контакты
+  *========================================
+.contacts
+  padding: 30px 0
+  color: #fff
+  background: url(../img/bgcontacts.jpg) no-repeat
+  background-position-x: center
+
+  h3
+    font: 600 48px/60px "Montserrat", sans-serif
+    text-transform: uppercase
+
+  .hero
+    h2
+      color: white
+      text-decoration-color: white
+
+    p
+      margin: 15px 0
+      font: 100 24px/28px "Montserrat", sans-serif
+
+    .bold
+      font: 600 24px/28px "Montserrat", sans-serif
+
+    .warp-1
+      padding-top: 60px
+      padding-bottom: 60px
+      text-align: left
+/*
+  *========================================
+  * Футер
+  *========================================
+
+.footer
+  padding-top: 20px
+  background-size: 1366px
+  background-color: #160629
+
+  .logo
+    img
+      width: 160px
+      height: 85px
+      margin: 25px 0 0 0
+      float: none
+
+  .nav-phone
+    float: none
+    display: block
+    margin-top: 80px
+    margin-bottom: 30px
+
+  &_naw
+    font: 100 18px/50px "Montserrat", sans-serif
+
+    a
+      color: white
+
+  .links
+    font: 100 14px/18px "Montserrat", sans-serif
+
+    a
+      margin-right: 15px
+      color: #808080
+      text-decoration: #808080 underline
+
+  .copyright
+    padding: 10px 0
+    font: 100 12px/18px "Montserrat", sans-serif
+    color: #808080
+    text-decoration: #808080 underline
+
+  &_logo
+    align-items: center
+    display: flex
+    justify-content: center
+
+
+.main-container
+  float: left
+  position: relative
+  left: 50%
+
+.fixer-container
+  float: left
+  position: relative
+  left: -50%
+
+.icon-orange
+  margin-right: 10px
+//color: #ecc417
+
+.form-group
+  margin-right: .4rem
+
+.grow:hover
+  -webkit-transform: scale(1.2)
+  -ms-transform: scale(1.2)
+  transform: scale(1.2)
+  transform-origin: center center
+
+
+.transition-scale
+  position: relative
+  z-index: 2
+  text-align: center
+  cursor: pointer
+  transition: linear
+
+.transition-scale:hover
+  -webkit-transform: scale(1.1)
+  transform: scale(1.1)
+  transition: background-color .5s
+
+  .transition-scale1
+    -webkit-transform: scale(.90909)
+    transform: scale(.90909)
+    transition: background-color .5s
+.navbar .dropdown-menu
+
+  -vendor-animation-duration: .5s
+  -vendor-animation-delay: .3s
+  -vendor-animation-iteration-count: infinite
+
+.megamenu
+  position: static
+  .dropdown-menu
+    animation-duration: .3s
+    background: none
+    border: none
+    width: 100%
+    .bg-violet
+      background-color: #531974
+    a
+      font: 700 30px/80px "Montserrat", sans-serif
+      color: white
+
+      &:hover
+        text-decoration: underline
+
+    .soc-icon
+      div
+        display: inline-block
+        height: 75px
+        width: 75px
+        overflow: hidden
+        //background-repeat: no-repeat
+
+
+.burger
+  height: 60px
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 2
+  background: $nav-bg
+  cursor: pointer
+  transition: $ease
+  border-radius: 0
+
+  &:hover
+    background: #971ddc
+
+  &__patty
+    position: relative
+    height: 2px
+    width: 40px
+    background: white
+
+    &:before
+      content: ""
+      position: absolute
+      top: -10px
+      left: 0
+      height: 2px
+      width: 84%
+      background: white
+
+    &:after
+      content: ""
+      position: absolute
+      top: 10px
+      left: 0
+      height: 2px
+      width: 68%
+      background: white
+
+
+  &__patty
+
+  &__patty:before
+
+  &__patty:after
+    will-change: transform
+    transition: $ease
+
+.show .burger
+  &__patty
+
+    position: relative
+    height: 0
+
+    &:before, &:after
+      position: absolute
+      top: -16px
+      left: 20px
+      content: ' '
+      height: 36px
+      width: 2px
+      background-color: white
+
+    &:before
+      transform: rotate(45deg)
+
+    &:after
+      transform: rotate(-45deg)
+
